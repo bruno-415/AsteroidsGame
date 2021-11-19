@@ -16,11 +16,11 @@ public void draw()
   for(int i = 0; i < starfield.length; i++) 
     starfield[i].show();
    if(keyPressed) {
-     if(key == 'a')
+     if(key == 'a' || keyCode == LEFT)
        bruno.turn(-10);
-     if(key == 'd')
+     if(key == 'd' || keyCode == RIGHT)
        bruno.turn(10);
-     if(key == 'w')
+     if(key == 'w' || keyCode == UP)
        bruno.accelerate(0.02);
    }
    bruno.show();
