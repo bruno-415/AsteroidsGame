@@ -15,14 +15,20 @@ public void draw()
   background(0);
   for(int i = 0; i < starfield.length; i++) 
     starfield[i].show();
-   if(keyPressed) {
+   keyPressed();
+   bruno.show();
+   bruno.move();
+}
+
+public void keyPressed() {
      if(key == 'a' || keyCode == LEFT)
        bruno.turn(-10);
      if(key == 'd' || keyCode == RIGHT)
        bruno.turn(10);
      if(key == 'w' || keyCode == UP)
        bruno.accelerate(0.02);
-   }
-   bruno.show();
-   bruno.move();
+     if(key == ' ') {
+       bruno.hyperspace();
+       key = (char)0;
+     }
 }
