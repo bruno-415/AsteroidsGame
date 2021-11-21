@@ -9,7 +9,7 @@ boolean turnLeft = false;
 public void setup() 
 {
   background(0);
-  size(800, 800);
+  size(600, 600);
   for(int i = 0; i < starfield.length; i++)
     starfield[i] = new Star();
    bruno = new Spaceship();
