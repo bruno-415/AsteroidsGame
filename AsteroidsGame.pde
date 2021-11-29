@@ -1,10 +1,10 @@
 //your variable declarations here
-Star[] starfield = new Star[200];
-Spaceship bruno;
+private Star[] starfield = new Star[200];
+private Spaceship bruno;
 
-boolean accelerate = false;
-boolean turnRight = false;
-boolean turnLeft = false;
+private boolean accelerate = false;
+private boolean turnRight = false;
+private boolean turnLeft = false;
 
 public void setup() 
 {
