@@ -1,5 +1,6 @@
 //your variable declarations here
 private Star[] starfield = new Star[200];
+private ArrayList<Asteroid> asteroidField;
 private Spaceship bruno;
 
 private boolean accelerate = false;
@@ -12,7 +13,10 @@ public void setup()
   size(600, 600);
   for(int i = 0; i < starfield.length; i++)
     starfield[i] = new Star();
-   bruno = new Spaceship();
+  asteroidField = new ArrayList<Asteroid>();
+  for(int i = 0; i < 5; i++)
+    asteroidField.add(new Asteroid());
+  bruno = new Spaceship();
 }
 public void draw() 
 {
@@ -22,6 +26,10 @@ public void draw()
    movement();
    bruno.show();
    bruno.move();
+   for(int i = 0; i < asteroidField.size(); i++) {
+     asteroidField.get(i).move();
+     asteroidField.get(i).show();
+   }
 }
 
 public void keyPressed() {
